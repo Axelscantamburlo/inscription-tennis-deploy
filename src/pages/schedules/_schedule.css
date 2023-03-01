@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@300&display=swap");
+
+
+
+
+/*formule list */
+.schedules-container .name-formules-container {
+  padding-top: 10px;
+  height: 150px;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.schedules-container .name-formules-container .formules-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+}
+
+.schedules-container .name-formules-container .formules-list label {
+  margin-bottom: 5px;
+}
+
+.schedules-container .name-formules-container .formules-list select {
+  border: none;
+  border: 1px solid var(--blue-color);
+  border-radius: 10px;
+  padding-left: 5px;
+  outline: none;
+  width: 210px;
+}
+
+
+
+/* header table */
+
+.header-table {
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.header-table h4 {
+  color: var(--grey-color);
+}
+
+.header-table .second-row {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* schedule */
+
+.schedules {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+
+.schedules table thead {
+  height: 40px;
+  background-color: var(--blue-color);
+  color: var(--grey-color);
+}
+
+.one-schedule {
+  border-radius: 10px;
+  width: 500px;
+}
+
+.one-schedule table {
+  width: 200px;
+  max-height: 300px;
+  border-collapse: collapse;
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+
+.one-schedule table tbody {
+  border: 1px solid red;
+}
+
+.one-schedule:first-child {
+  margin-top: 125px;
+}
+
+.one-schedule:last-child {
+  margin-bottom: 20px;
+}
+
+
+.one-schedule table thead tr th {
+  color: white
+}
+
+tr {
+  border: 1px solid #b3adad;
+  color: #000000;
+}
+
+.empty {
+  text-align: center;
+  background: #f5f2f2;
+  height: 40px;
+  width: 300px;
+  color: #313030;
+}
+
+.name-drop {
+  cursor: grab;
+  color: rgb(65, 60, 60);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e0d5d5;
+  height: 40px;
+}
+
+.place-prise {
+  background-color: var(--background-color);
+  color: white;
+  text-align: center;
+  z-index: 10000;
+  height: 40px;
+  cursor: pointer;
+
+}
+
+.j {
+  background: yellow;
+}
+
+.admin-place-prise {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/* button choisir cette horaire */
+
+.choisir-cette-horaire {
+  border: none;
+  padding: 10px 45px;
+  border-radius: 5px;
+  background: var(--linear-gradient);
+  color: var(--grey-color);
+  margin-bottom: 20px;
+}
+
+
+.choisir-cette-horaire:hover,
+.show-more-info:hover {
+  transform: scale(1.009);
+}
+
+.no-places-remaining:hover {
+  transform: scale(1);
+}
+
+.show-more-info {
+  border: none;
+  padding: 6px 25px;
+  border-radius: 5px;
+  background: #d1d1d1;
+  color: var(--background-color);
+  margin-bottom: 5px;
+}
+
+/* button confirm */
+
+.schedules-container .validate-button {
+  background: var(--linear-gradient);
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+
+
+
+/* confirm modal container */
+.confirm-modal-container {
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+
+
+
+
+
+@media screen and (min-width: 600px) {
+  .schedules-container {
+    min-height: 100vh;
+  }
+
+  .schedules-container .name-formules-container .formules-list {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    padding: 30px;
+  }
+
+  .schedules-container .name-formules-container .formules-list label {
+    color: white
+  }
+
+  .schedules {
+
+    display: grid;
+    align-items: flex-end;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 0px;
+    width: 100%;
+  }
+
+  .show-schedule-clicked-container .schedules {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .schedules .one-schedule {
+    height: 670px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+    width: 100%;
+  }
+
+
+  .schedules .one-schedule:not(:first-child) {
+    margin-top: 00px;
+  }
+
+  .schedules .one-schedule .places-remaining {
+    z-index: -1;
+  }
+
+  .schedules .one-schedule:last-child {
+    margin-bottom: 0px;
+  }
+
+  .validate-button {
+    position: fixed;
+    padding: 20px 30px;
+    bottom: 75px;
+    right: 75px;
+  }
+
+  .validate-button:hover {
+    animation: scale 0.3s forwards;
+
+  }
+
+  /*  already registed */
+
+  .already-registed {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+    font-size: 3.5rem;
+    user-select: black;
+  }
+
+
+}
+
+
+/* 
+@media screen and (min-width: 400px) {
+  .schedules-container .schedules {
+    display: flex;
+    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(1, 180px);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 0px;
+  }
+  */
+
+
+  /* couleur place occupée */
+
+
+  .ba, .mi {
+    background-color: white;
+  }
+
+  .vi {
+    background-color: purple;
+  }
+
+  .ro {
+    background-color: red;
+  }
+
+  .or {
+    background-color: orange;
+  }
+
+  .ve {
+    background-color: green;
+  }
+
+  .ja {
+    background-color: yellow;
+  }
+
+  .hour-selected {
+    background-color: red;
+  }

@@ -1,0 +1,46 @@
+.confirm-modal-container .container-add-playeur {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirm-modal-container .container-input-icon {
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+.confirm-modal-container .container-input-icon input {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+}
+
+.confirm-modal-container .container-input-icon input::placeholder {
+    font-style: italic;
+    color: grey;
+}
+
+.confirm-modal-container .container-input-icon  span {
+    font-size: 18px;
+    padding: 7px 15px;
+    color: white;
+    background: var(--blue-color);
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.confirm-modal-container .container-input-icon  span:hover {
+    opacity: 0.9;
+}
+
+.confirm-modal-container .container-input-icon  span svg {
+    transform: translateY(3px);
+}
+
+.confirm-modal-container input:focus {
+    outline: 1px solid var(--blue-color);
+}

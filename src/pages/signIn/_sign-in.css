@@ -1,0 +1,135 @@
+.sign-in-container {
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--background-color);
+}
+
+.sign-in-container .form-container {
+    color: var(--grey-color);
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.sign-in-container form {
+    width: 90%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-in-container form .submit-btn {
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+    color: white;
+    background: var(--linear-gradient);
+    border: none;
+    padding: 9px 0;
+    border-radius: 10px;
+    margin-top: 27px;
+    font-size: 1.1rem;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+}
+
+.sign-in-container form .submit-btn:hover {
+    cursor: pointer;
+    width: 90%;
+    animation: scale 0.15s;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1) translateX(-50%);
+    }
+
+    50% {
+        transform: scale(0.95) translateX(-50%);
+    }
+
+    100% {
+        transform: scale(1) translateX(-50%);
+    }
+}
+
+
+.sign-in-container label
+ {
+    font-weight: bold;
+    color: var(--grey-color);
+}
+
+@media screen and (min-width: 630px) {
+    .sign-in-container h1 {
+        margin: 50px 97px;
+        color: var(--background-color);
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+
+    }
+
+    .sign-in-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+    .sign-in-container .container-responsive {
+        position: relative;
+        height: 650px;
+        background-color: var(--grey-color);
+        box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+        width: 600px;
+        border-radius: 20px;
+    }
+    
+    .sign-in-container .container-responsive .form-container {
+        width: 100%;
+        transform: translateY(-10px);
+    }
+
+    
+    .sign-in-container .container-responsive .form-container .inputs {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        height: 400px;
+    }
+
+    .sign-in-container form .inputs input {
+        box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+        width: 400px;
+        border: none;
+        padding: 15px 0px 15px 12.5px;
+        background-color: #eaeaea;
+        border-radius: 8px;
+        outline: none;
+        margin-bottom: 20px;
+        color: var(--background-color)
+    }
+
+    .sign-in-container form .submit-btn {
+        position: absolute;
+        bottom: 30px;
+        max-width: 400px;
+    }
+
+    .sign-in-container form .submit-btn:hover {
+
+        animation: none;
+        opacity: 0.9;
+    }
+
+    .sign-in-container form .row {
+        display: flex;
+        flex-direction: column;
+    }
+    .sign-in-container form .row label {
+        margin-bottom: 10px;
+        color: var(--background-color);
+    }
+}

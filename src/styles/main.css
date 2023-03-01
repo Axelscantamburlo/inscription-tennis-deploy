@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&display=swap');
+
+*,
+::after,
+::before {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 500;
+}
+
+:root {
+    --blue-color: #2274a5;
+    --grey-color: #E5E6E4;
+    --background-color: #242d34;
+    --linear-gradient: linear-gradient(90deg, rgba(34, 116, 165, 1) 14%, rgba(36, 122, 204, 1) 49%, rgba(9, 102, 191, 1) 84%);
+    --box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2)
+
+}

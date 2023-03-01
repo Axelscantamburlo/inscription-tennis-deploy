@@ -1,0 +1,10 @@
+.show-all-schedules-container {
+    background-color: var(--background-color);
+}
+
+.show-all-schedules-container .center {
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}

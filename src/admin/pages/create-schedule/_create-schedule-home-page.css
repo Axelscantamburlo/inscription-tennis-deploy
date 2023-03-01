@@ -1,0 +1,511 @@
+.create-schedule-home-page-container {
+  min-height: 100vh;
+  background-color: var(--background-color);
+  position: relative;
+
+}
+
+.create-schedule-container h1 {
+  color: var(--blue-color);
+}
+
+label {
+  color: var(--background-color)
+}
+
+
+
+/* arrow icon close all */
+.update-schedule-container {
+  background-color: var(--background-color);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.arrow-icon {
+  z-index: 1001;
+  position: fixed;
+  right: 10px;
+  top: 60px;
+  color: var(--blue-color);
+  background: var(--grey-color);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid var(--blue-color);
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow-icon-down {
+  position: fixed;
+  right: 25px;
+  top: 60px;
+}
+
+.close-icon {
+  background-color: #ef6767;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  cursor: pointer;
+  z-index: 30;
+}
+
+.close-icon:hover {
+  background-color: #da4444;
+}
+
+.create-schedule-home-page-container .create-schedule-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  border-bottom: 2px solid var(--blue-color);
+  position: relative;
+  padding-top: 20px;
+  background-color: var(--grey-color);
+
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  z-index: 1000;
+}
+
+
+.create-schedule-home-page-container .create-schedule-container form {
+  width: 35%;
+}
+
+.create-schedule-home-page-container .create-schedule-container .inputs .input:last-child {
+  margin-bottom: 75px;
+}
+
+.create-schedule-home-page-container .create-schedule-container .inputs .input {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-schedule-container form .inputs .input input,
+.create-schedule-container form .inputs .input select {
+  border: none;
+  padding: 5px 10px;
+  outline: none;
+  border-radius: 5px;
+}
+
+.create-schedule-container form .inputs .input input[type='number']:focus,
+.create-schedule-container form .inputs .input select:focus,
+button:focus {
+  outline: 1px solid var(--blue-color);
+}
+
+
+.create-schedule-container form .inputs .input input[type='time'] {
+  border: none;
+  color: #2a2c2d;
+  font-size: 14px;
+  font-family: helvetica;
+  height: 33px;
+}
+
+
+input[type=time]::-webkit-datetime-edit-fields-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* The space between the fields - between hour and minute, the minute and 
+    second, second and am/pm */
+input[type=time]::-webkit-datetime-edit-text {
+  padding: 0px 12px;
+}
+
+/* The naming convention for the hour, minute, second, and am/pm field is
+    `-webkit-datetime-edit-{field}-field` */
+
+/* Hour and Minute */
+input[type=time]::-webkit-datetime-edit-hour-field,
+input[type=time]::-webkit-datetime-edit-minute-field {
+  background-color: rgb(236, 236, 236);
+  height: 25px;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  border-radius: 15%;
+  color: #2a2c2d;
+
+}
+
+input[type=time]::-webkit-datetime-edit-hour-field:focus,
+input[type=time]::-webkit-datetime-edit-minute-field:focus {
+  background-color: var(--background-color);
+  color: white
+}
+
+
+/* AM/PM */
+input[type=time]::-webkit-datetime-edit-ampm-field {
+  background-color: #7155d3;
+  border-radius: 15%;
+  color: #fff;
+  padding: 19px 13px;
+}
+
+
+
+
+
+
+/* icon add educator */
+.input-name-educator select {
+  width: 90%;
+}
+
+.input-name-educator .container-select-icon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.input-name-educator .container-select-icon span {
+  cursor: pointer;
+  color: var(--grey-color);
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 1px 7px;
+  background-color: var(--blue-color);
+}
+
+.input-name-educator .container-select-icon span:hover {
+  opacity: 0.9;
+}
+
+.input-name-educator .container-select-icon span svg {
+  transform: translateY(2px);
+}
+
+/* second educator */
+
+
+.input-name-educator .container-second-educator span {
+  padding: 2px 12px;
+}
+
+
+/* submit button */
+.create-schedule-container input[type='submit'] {
+  border: none;
+  padding: 7px 75px;
+  position: absolute;
+  bottom: 10px;
+  right: 40px;
+  color: white;
+  background: var(--linear-gradient);
+  border-radius: 5px;
+}
+
+.create-schedule-container input[type='submit']:hover {
+  animation: scale 0.3s forwards
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1)
+  }
+
+  100% {
+    transform: scale(1.005);
+  }
+}
+
+
+/* end of add créneau */
+
+
+/* aucun créneau */
+
+.create-schedule-home-page-container .container {
+  padding-top: 350px;
+}
+
+.h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--grey-color);
+}
+
+
+.navbar {
+  display: none;
+}
+
+.schedules-cards {
+  list-style-type: none;
+  margin-top: 50px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.schedules-cards .card {
+  cursor: pointer;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--grey-color);
+  padding: 0;
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 30px;
+
+}
+.schedules-cards .card:last-child {
+  margin-bottom: 125px;
+}
+
+.schedules-cards .card .left-card {
+  width: 100%;
+}
+
+.schedules-cards li {
+  list-style-type: none;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+
+.schedules-cards .card:hover {
+  animation: scale 0.2s ease-in-out forwards;
+}
+
+
+.schedules-cards h2 {
+  color: var(--grey-color);
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+/* update/delete btns */
+
+.schedules-cards .card .delete-update-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.schedules-cards .card .delete-update-buttons button {
+  border: none;
+  border-radius: 5px;
+  color: var(--grey-color);
+  padding: 5px 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+
+
+
+.schedules-cards .card .delete-update-buttons .update-btn {
+  background: var(--blue-color);
+}
+
+.schedules-cards .card .delete-update-buttons .delete-btn {
+  background-color: #ef6767
+}
+
+.delete-all-schedules-container button:hover,
+.schedules-cards .card .delete-update-buttons button:hover {
+  opacity: 0.9;
+}
+
+
+/* delete all schedule btn */
+
+.delete-all-schedules-container button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  border: none;
+  color: var(--grey-color);
+  z-index: 30px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  background: var(--linear-gradient);
+}
+
+
+
+/* ((((((((((((((((((((((((((((((((((((((((((((((((((((((responsive))))))))))))))))))))))))))))))))))))))))) */
+
+
+@media screen and (min-width: 1100px) {
+
+  /* ------------------------------------------------------------------------------header--------------------------------------------------------------------- */
+
+
+
+
+  .create-schedule-home-page-container .create-schedule-container form {
+    width: 100%;
+    display: flex;
+    padding: 20px 0px 90px 0;
+  }
+
+  .create-schedule-container form .inputs {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+
+  .create-schedule-container form .inputs .input {
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+  }
+
+  .create-schedule-container form .inputs .input input,
+  .create-schedule-container form .inputs .input select {
+    padding: 5px 10px;
+  }
+
+
+  .create-schedule-home-page-container .create-schedule-container .inputs .input:last-child {
+    margin-bottom: 0px;
+  }
+
+
+  /* ------------------------------------------------------------------------------body--------------------------------------------------------------------- */
+
+
+  /* navbar */
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar {
+    z-index: 20;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    color: white;
+    letter-spacing: 0.8px;
+  }
+
+
+  .navbar ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 25px;
+    grid-row-gap: 0px;
+  }
+
+  .navbar ul li {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* schedule card */
+
+  .schedules-cards {
+    margin-top: 50px;
+    width: 90%;
+    cursor: pointer;
+
+
+  }
+
+  .schedules-cards li {
+    margin: 0;
+  }
+
+  .schedules-cards h2 {
+    color: var(--grey-color);
+    margin: 0;
+    padding-bottom: 20px;
+  }
+
+  .schedules-cards h2 span {
+    font-size: 17px;
+    margin-right: 10px;
+  }
+
+  .schedules-cards .card {
+    height: 150px;
+    width: 100%;
+  }
+
+  .schedules-cards .card .left-card {
+    color: var(--background-color);
+    height: 140px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 25px;
+    grid-row-gap: 0px;
+    border-radius: 5px;
+    background-color: var(--grey-color);
+    width: 100%;
+  }
+
+
+
+  .schedules-cards .card .left-card li {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  /* delete update btn */
+/* 
+  .schedules-cards .card .delete-update-buttons {
+    background-color: red;
+    width: 10%;
+    position: absolute;
+    right: 30px;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+  } */
+
+  .schedules-cards .card .delete-update-buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .schedules-cards .card .delete-update-buttons button {
+    margin: 0px 20px;
+  }
+
+}

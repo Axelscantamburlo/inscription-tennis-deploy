@@ -1,0 +1,75 @@
+.container-connexion-choice {
+    background-color: var(--background-color);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container-connexion-choice h1 {
+    color: var(--grey-color);
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 100px;
+    left: 60px;
+}
+
+.container-connexion-choice .container-link {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-connexion-choice .container-link a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 75px;
+    color: var(--blue-color);
+    margin: 50px;
+}
+
+.container-connexion-choice .container-link a button {
+    font-size: 1.05rem;
+    width: 60%;
+    border-radius: 10px;
+    border: none;
+    height: 100%;
+    background: var(--linear-gradient);
+    color: white;
+}
+
+
+@media screen and (min-width: 630px) {
+    .container-connexion-choice {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    .container-connexion-choice .container-link {
+        width: 600px;
+        height: 650px;
+        background-color: var(--grey-color);
+        border-radius: 20px;
+        position: relative;
+    }
+
+    .container-connexion-choice .container-link h1 {
+        color: var(--background-color);
+        position: absolute;
+        top: 50px;
+        left: 75px;
+    }
+
+    .container-connexion-choice .container-link button {
+       
+        box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .container-connexion-choice .container-link button:hover {
+        opacity: 0.9;
+    }
+}
