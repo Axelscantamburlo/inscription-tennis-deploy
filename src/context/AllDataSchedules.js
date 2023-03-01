@@ -18,7 +18,7 @@ export const AllDataSchedulesProvider = ({ children }) => {
 
   useEffect(() => {
     loadData()
-    if (document.location.href === "https://inscription-us-colomiers-tennis.online/inscription" || document.location.href === "https://inscription-us-colomiers-tennis.online/inscription/deuxieme-heure" || document.location.href === "https://inscription-us-colomiers-tennis.online/inscription/deuxieme-heure/troisieme-heure") {
+    if (document.location.href === "https://lighthearted-shortbread-d1d16e.netlify.app/inscription" || document.location.href === "https://lighthearted-shortbread-d1d16e.netlify.app/inscription/deuxieme-heure" || document.location.href === "https://lighthearted-shortbread-d1d16e.netlify.app/inscription/deuxieme-heure/troisieme-heure") {
 
       setInterval(() => {
         loadData()

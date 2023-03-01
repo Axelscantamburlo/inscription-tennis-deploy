@@ -91,16 +91,16 @@ const ConfirmInscriptionModal = ({ setConfirmModal, dataScheduleDropped1, dataSc
 
 
     const clickedConfirmButton = () => {
-        if (window.location.href === "https://inscription-us-colomiers-tennis.online/inscription") {
+        if (window.location.href === "https://lighthearted-shortbread-d1d16e.netlify.app/inscription") {
             addInscription(dataScheduleDropped1.id)
             updateUserInfo()
 
-        } else if (window.location.href === "https://inscription-us-colomiers-tennis.online/inscription/deuxieme-heure") {
+        } else if (window.location.href === "https://lighthearted-shortbread-d1d16e.netlify.app/inscription/deuxieme-heure") {
             addInscription(dataScheduleDropped1.id)
             addInscription(dataScheduleDropped2.id)
             updateUserInfo()
 
-        } else if (window.location.href === "https://inscription-us-colomiers-tennis.online/inscription/deuxieme-heure/troisieme-heure") {
+        } else if (window.location.href === "https://lighthearted-shortbread-d1d16e.netlify.app/inscription/deuxieme-heure/troisieme-heure") {
             addInscription(dataScheduleDropped1.id)
             addInscription(dataScheduleDropped2.id)
             addInscription(dataScheduleDropped3.id)
