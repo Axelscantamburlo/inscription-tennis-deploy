@@ -22,7 +22,7 @@ const AddPlayeurModal = ({ setShowAddPlayeurModal, id, setIsScheduleClicked }) =
     const { usersRegisted } = scheduleClicked
 
     useEffect(() => {
-        axios.get(`https://inscription-colomiers-tennis.herokuapp.com/api/get/${id}`)
+        axios.get(`https://inscription-tennis.herokuapp.com/api/get/${id}`)
             .then((response) =>
                 setScheduleClicked(response.data[0]))
     }, [id, usersRegisted])
@@ -66,7 +66,7 @@ const AddPlayeurModal = ({ setShowAddPlayeurModal, id, setIsScheduleClicked }) =
 
     const addPlayeur = () => {
         if (nameFormated !== '') {
-            axios.put(`https://inscription-colomiers-tennis.herokuapp.com/api/update/${id}`, {
+            axios.put(`https://inscription-tennis.herokuapp.com/api/update/${id}`, {
                 ...scheduleClicked,
                 usersRegisted: usersRegisted === null ? nameFormated + "," : usersRegisted + nameFormated + ","
             }).catch((err) => toast.error(err.response.data), { hideProgressBar: true })

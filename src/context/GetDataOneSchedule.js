@@ -10,7 +10,7 @@ export const GetDataOneScheduleProvider = ({ children }) => {
   const [dataScheduleClicked, setDataScheduleClicked] = useState({})
 
   const getDataScheduleClicked = (id) => {
-    axios.get(`https://inscription-colomiers-tennis.herokuapp.com/api/get/${id}`)
+    axios.get(`https://inscription-tennis.herokuapp.com/api/get/${id}`)
       .then((response) => {
         setDataScheduleClicked(response.data[0])
       })

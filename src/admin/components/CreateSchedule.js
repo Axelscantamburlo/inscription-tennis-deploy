@@ -43,7 +43,7 @@ const CreateSchedule = ({ data, setData, title, loadData, showCreateScheduleComp
     let { id } = useParams()
 
     useEffect(() => {
-        axios.get(`https://inscription-colomiers-tennis.herokuapp.com/api/get/${id}`)
+        axios.get(`https://inscription-tennis.herokuapp.com/api/get/${id}`)
             .then((response) => setState({ ...response.data[0] }))
     }, [id])
 
@@ -77,7 +77,7 @@ const CreateSchedule = ({ data, setData, title, loadData, showCreateScheduleComp
     // post schedule onSubmit
 
     const postScheduleInDatabase = () => {
-        axios.post("https://inscription-colomiers-tennis.herokuapp.com/api/post", {
+        axios.post("https://inscription-tennis.herokuapp.com/api/post", {
             day,
             startHour,
             endHour,
@@ -118,7 +118,7 @@ const CreateSchedule = ({ data, setData, title, loadData, showCreateScheduleComp
     //  update schedule onSubmit
 
     const updateDatabase = () => {
-        axios.put(`https://inscription-colomiers-tennis.herokuapp.com/api/update/${id}`, {
+        axios.put(`https://inscription-tennis.herokuapp.com/api/update/${id}`, {
             day,
             startHour,
             endHour,

@@ -10,7 +10,7 @@ export const AllDataSchedulesProvider = ({ children }) => {
 
 
   const loadData = async () => {
-    const response = await axios.get("https://inscription-colomiers-tennis.herokuapp.com/api/get")
+    const response = await axios.get("https://inscription-tennis.herokuapp.com/api/get")
     setData(response.data)
   }
 

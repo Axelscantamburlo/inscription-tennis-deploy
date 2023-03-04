@@ -24,7 +24,7 @@ const SelectLevel = () => {
 
 
   const loadData = async () => {
-    const response = await axios.get("https://inscription-colomiers-tennis.herokuapp.com/apiUsers/get")
+    const response = await axios.get("https://inscription-tennis.herokuapp.com/apiUsers/get")
     setDataUsersReInscription(response.data)
   }
   useEffect(() => {
@@ -110,7 +110,7 @@ const SelectLevel = () => {
   const doesUserIsInDatabase = () => {
     dataUsersReInscription.forEach((user) => {
       if (nom === user.Nom + ' ' + user.Prénom) {
-        axios.get(`https://inscription-colomiers-tennis.herokuapp.com/apiUsers/get/${user.id}`)
+        axios.get(`https://inscription-tennis.herokuapp.com/apiUsers/get/${user.id}`)
           .then(response => {
             setBirthdayDate(response.data[0].dateDeNaissance)
             setLevel(response.data[0].Niveau.toLowerCase())

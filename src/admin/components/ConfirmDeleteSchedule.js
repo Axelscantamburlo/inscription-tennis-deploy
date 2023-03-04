@@ -10,11 +10,11 @@ const ConfirmDeleteSchedule = ({ id, setConfirmModal, text, title }) => {
 
     const deleteSchedule = () => {
         if (text === 'Êtes-vous certain de vouloir supprimer ce créneau ?') {
-            axios.delete(`https://inscription-colomiers-tennis.herokuapp.com/api/remove/${id}`)
+            axios.delete(`https://inscription-tennis.herokuapp.com/api/remove/${id}`)
             closeModal('Le créneau a bien été supprimé.')
 
         } else {
-            axios.delete('https://inscription-colomiers-tennis.herokuapp.com/api/remove')
+            axios.delete('https://inscription-tennis.herokuapp.com/api/remove')
             closeModal('Tous les créneaux ont bien été supprimés')
         }
     }

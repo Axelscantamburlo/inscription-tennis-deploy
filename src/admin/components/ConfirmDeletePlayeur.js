@@ -20,7 +20,7 @@ const ConfirmDeletePlayeur = ({ playeurClick, setShowConfirmDeletePlayeur, index
     const { day, startHour, endHour, usersRegisted } = scheduleClicked
 
     useEffect(() => {
-        axios.get(`https://inscription-colomiers-tennis.herokuapp.com/api/get/${id}`)
+        axios.get(`https://inscription-tennis.herokuapp.com/api/get/${id}`)
             .then((response) =>
                 setScheduleClicked(response.data[0]))
     }, [id, usersRegisted])
@@ -31,7 +31,7 @@ const ConfirmDeletePlayeur = ({ playeurClick, setShowConfirmDeletePlayeur, index
         const newArr = arrayUsersRegister.splice(index, 1)
         const newUsersRegister = arrayUsersRegister.length === 0 ? null : arrayUsersRegister.toString() + ','
 
-        axios.put(`https://inscription-colomiers-tennis.herokuapp.com/api/update/${id}`, {
+        axios.put(`https://inscription-tennis.herokuapp.com/api/update/${id}`, {
             ...scheduleClicked,
             usersRegisted: newUsersRegister
 

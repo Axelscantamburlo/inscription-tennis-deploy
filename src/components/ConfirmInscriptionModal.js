@@ -18,7 +18,7 @@ const ConfirmInscriptionModal = ({ setConfirmModal, dataScheduleDropped1, dataSc
 
     //  add inscription 
     const addInscription = (currentId) => {
-        axios.get(`https://inscription-colomiers-tennis.herokuapp.com//get/${currentId}`)
+        axios.get(`https://inscription-tennis.herokuapp.com/get/${currentId}`)
             .then((response) => {
                 updateDatabase(response.data[0])
             }
@@ -77,7 +77,7 @@ const ConfirmInscriptionModal = ({ setConfirmModal, dataScheduleDropped1, dataSc
         const array = user !== null ? user.split(",") : null;
 
         if (array === null || array.length <= numberOfPlaces) {
-            axios.put(`https://inscription-colomiers-tennis.herokuapp.com/api/update/${id}`, {
+            axios.put(`https://inscription-tennis.herokuapp.com/api/update/${id}`, {
                 ...data,
                 usersRegisted: usersRegisted === null ? nom + "," : usersRegisted + nom + ","
             }).catch((err) => toast.error(err.response.data), { hideProgressBar: true })
