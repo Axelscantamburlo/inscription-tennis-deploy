@@ -7,10 +7,10 @@ const ConnexionChoice = () => {
             <div className="container-link">
            <h1>Bienvenue !</h1>
                 <NavLink to='/se-connecter'>
-                    <button>Se Connecter</button>
+                    <button>Se Connecterrrrrrrrrr</button>
                 </NavLink>
                 <NavLink to='/creer-un-compte'>
-                    <button>Créer un Compte</button>
+                    <button>Créer un Compteeeeee</button>
                 </NavLink>
            </div>
         </div>
