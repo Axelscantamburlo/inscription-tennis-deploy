@@ -12,6 +12,9 @@ const ConnexionChoice = () => {
                 <NavLink to='/creer-un-compte'>
                     <button>Créer un Compteeeeee</button>
                 </NavLink>
+                <NavLink to='/admin/accueil-admin/ajouter-un-creneau'>
+                    <button>Créer un Compteeeeee</button>
+                </NavLink>
            </div>
         </div>
     );
