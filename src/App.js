@@ -138,7 +138,7 @@ function App() {
         <ToastContainer position="top-center" />
         <BrowserRouter>
           <Routes>
-            <Route exact path="/" element={<ConnexionChoice />} />
+            <Route  path="/" element={<ConnexionChoice />} />
             <Route path="/creer-un-compte" element={<SignUp />} />
             <Route path="/se-connecter" element={<SignIn />} />
             <Route path="/inscription">
