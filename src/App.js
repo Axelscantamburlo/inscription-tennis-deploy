@@ -2,8 +2,6 @@ import SignIn from "./pages/signIn/SignIn";
 import SignUp from './pages/signUp/SignUp'
 import ScheduleHomePage from "./pages/schedules/ScheduleHomePage";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { DndProvider } from "react-dnd";
-import { HTML5Backend } from "react-dnd-html5-backend";
 import { useContext, useEffect, useLayoutEffect, useState } from 'react'
 import { AuthContext } from './context/AuthContext'
 import AdminLogin from "./admin/pages/admin-login/AdminLogin";
@@ -133,12 +131,11 @@ function App() {
 
 
   return (
-    <DndProvider backend={HTML5Backend}>
       <div className="App">
         <ToastContainer position="top-center" />
         <BrowserRouter>
           <Routes>
-            <Route  path="/" element={<ConnexionChoice />} />
+            <Route exact path="/" element={<ConnexionChoice />} />
             <Route path="/creer-un-compte" element={<SignUp />} />
             <Route path="/se-connecter" element={<SignIn />} />
             <Route path="/inscription">
@@ -161,7 +158,6 @@ function App() {
           </Routes>
         </BrowserRouter>
       </div>
-    </DndProvider>
   );
 }
 
