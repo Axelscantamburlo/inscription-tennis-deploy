@@ -30,7 +30,7 @@ const SignIn = () => {
         setLoader(true)
         setTimeout(() => {
           navigate("/inscription")
-          window.location = document.location
+          // window.location = document.location
         }, 2000)
       })
       .catch((error) => {
