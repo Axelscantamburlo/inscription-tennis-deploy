@@ -18,7 +18,7 @@ const ConfirmInscriptionModal = ({ setConfirmModal, dataScheduleDropped1, dataSc
 
     //  add inscription 
     const addInscription = (currentId) => {
-        axios.get(`https://inscription-tennis.herokuapp.com/get/${currentId}`)
+        axios.get(`https://inscription-tennis.herokuapp.com/api/get/${currentId}`)
             .then((response) => {
                 updateDatabase(response.data[0])
             }
