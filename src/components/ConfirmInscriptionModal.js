@@ -21,6 +21,7 @@ const ConfirmInscriptionModal = ({ setConfirmModal, dataScheduleDropped1, dataSc
         axios.get(`https://inscription-tennis.herokuapp.com/api/get/${currentId}`)
             .then((response) => {
                 updateDatabase(response.data[0])
+                console.log('ca c joué');
             }
             )
         setConfirmModal(false)
@@ -50,12 +51,10 @@ const ConfirmInscriptionModal = ({ setConfirmModal, dataScheduleDropped1, dataSc
             }
         } else if (level === "jaune 1" || level === "jaune 2" || level === "jaune 3" || level === "jaune 4" || level === "jaune 2/3/4") {
             if (chooseFormule === "1h par semaine") {
-                console.log('herre');
                 setPriceToPay("178 €")
             } else if (chooseFormule === "2h par semaine") {
                 setPriceToPay("316 €")
             } else if (chooseFormule === "forme jouée 2h par semaine") {
-                console.log('herrre');
                 setPriceToPay("280 €")
             } else {
                 setPriceToPay("428 €")
